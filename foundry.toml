@@ -1,8 +1,8 @@
-[profile.default]
-src = "contracts"
-out = "out"
-test = "test"
-libs = ["lib"]
+[profile.v05]
+src = "contracts/v0.5"
+out = "out/v0.5"
+test = "test/v0.5"
+libs = ["lib/v0.5"]
 auto_detect_solc = false
 bytecode_hash = "none"
 fuzz_runs = 256
@@ -10,6 +10,21 @@ gas_reports = ["*"]
 optimizer = true
 optimizer_runs = 10_000
 solc = "0.5.17"
+legacy = true
+no_match_contract = "ForkTest"
+
+[profile.v08]
+src = "contracts/v0.8"
+out = "out/v0.8"
+test = "test/v0.8"
+libs = ["lib/v0.8"]
+auto_detect_solc = false
+bytecode_hash = "none"
+fuzz_runs = 256
+gas_reports = ["*"]
+optimizer = true
+optimizer_runs = 10_000
+solc = "0.8.19"
 legacy = true
 no_match_contract = "ForkTest"
 

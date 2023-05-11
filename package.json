@@ -39,6 +39,8 @@
     "fork-test": "env FOUNDRY_PROFILE=fork-tests forge test",
     "fork-test:baklava": "env FOUNDRY_PROFILE=fork-tests forge test --match-contract Baklava",
     "fork-test:alfajores": "env FOUNDRY_PROFILE=fork-tests forge test --match-contract Alfajores",
-    "fork-test:celo-mainnet": "env FOUNDRY_PROFILE=fork-tests forge test --match-contract CeloMainnet"
+    "fork-test:celo-mainnet": "env FOUNDRY_PROFILE=fork-tests forge test --match-contract CeloMainnet",
+    "f8": "env FOUNDRY_PROFILE=v08 forge",
+    "f5": "env FOUNDRY_PROFILE=v05 forge"
   }
 }
