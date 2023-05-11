@@ -1,0 +1,6 @@
+[submodule "lib/v0.5/celo-foundry"]
+	path = lib/v0.5/celo-foundry
+	url = https://github.com/bowd/celo-foundry
+[submodule "lib/v0.5/openzeppelin-contracts"]
+	path = lib/v0.5/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
