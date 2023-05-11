@@ -1,0 +1,197 @@
+{
+  "storage": [
+    {
+      "astId": 42231,
+      "contract": "contracts/v0.5/StableToken.sol:StableToken",
+      "label": "_owner",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_address"
+    },
+    {
+      "astId": 11945,
+      "contract": "contracts/v0.5/StableToken.sol:StableToken",
+      "label": "initialized",
+      "offset": 20,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 14838,
+      "contract": "contracts/v0.5/StableToken.sol:StableToken",
+      "label": "registry",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_contract(IRegistry)15484"
+    },
+    {
+      "astId": 8900,
+      "contract": "contracts/v0.5/StableToken.sol:StableToken",
+      "label": "name_",
+      "offset": 0,
+      "slot": "2",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 8902,
+      "contract": "contracts/v0.5/StableToken.sol:StableToken",
+      "label": "symbol_",
+      "offset": 0,
+      "slot": "3",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 8904,
+      "contract": "contracts/v0.5/StableToken.sol:StableToken",
+      "label": "decimals_",
+      "offset": 0,
+      "slot": "4",
+      "type": "t_uint8"
+    },
+    {
+      "astId": 8908,
+      "contract": "contracts/v0.5/StableToken.sol:StableToken",
+      "label": "balances",
+      "offset": 0,
+      "slot": "5",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 8910,
+      "contract": "contracts/v0.5/StableToken.sol:StableToken",
+      "label": "totalSupply_",
+      "offset": 0,
+      "slot": "6",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 8916,
+      "contract": "contracts/v0.5/StableToken.sol:StableToken",
+      "label": "allowed",
+      "offset": 0,
+      "slot": "7",
+      "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))"
+    },
+    {
+      "astId": 8927,
+      "contract": "contracts/v0.5/StableToken.sol:StableToken",
+      "label": "inflationState",
+      "offset": 0,
+      "slot": "8",
+      "type": "t_struct(InflationState)8925_storage"
+    },
+    {
+      "astId": 8929,
+      "contract": "contracts/v0.5/StableToken.sol:StableToken",
+      "label": "exchangeRegistryId",
+      "offset": 0,
+      "slot": "12",
+      "type": "t_bytes32"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_bytes32": {
+      "encoding": "inplace",
+      "label": "bytes32",
+      "numberOfBytes": "32"
+    },
+    "t_contract(IRegistry)15484": {
+      "encoding": "inplace",
+      "label": "contract IRegistry",
+      "numberOfBytes": "20"
+    },
+    "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(address => uint256))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_uint256)"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_string_storage": {
+      "encoding": "bytes",
+      "label": "string",
+      "numberOfBytes": "32"
+    },
+    "t_struct(Fraction)10653_storage": {
+      "encoding": "inplace",
+      "label": "struct FixidityLib.Fraction",
+      "numberOfBytes": "32",
+      "members": [
+        {
+          "astId": 10652,
+          "contract": "contracts/v0.5/StableToken.sol:StableToken",
+          "label": "value",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint256"
+        }
+      ]
+    },
+    "t_struct(InflationState)8925_storage": {
+      "encoding": "inplace",
+      "label": "struct StableToken.InflationState",
+      "numberOfBytes": "128",
+      "members": [
+        {
+          "astId": 8918,
+          "contract": "contracts/v0.5/StableToken.sol:StableToken",
+          "label": "rate",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_struct(Fraction)10653_storage"
+        },
+        {
+          "astId": 8920,
+          "contract": "contracts/v0.5/StableToken.sol:StableToken",
+          "label": "factor",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_struct(Fraction)10653_storage"
+        },
+        {
+          "astId": 8922,
+          "contract": "contracts/v0.5/StableToken.sol:StableToken",
+          "label": "updatePeriod",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 8924,
+          "contract": "contracts/v0.5/StableToken.sol:StableToken",
+          "label": "factorLastUpdated",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_uint256"
+        }
+      ]
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint8": {
+      "encoding": "inplace",
+      "label": "uint8",
+      "numberOfBytes": "1"
+    }
+  }
+}
