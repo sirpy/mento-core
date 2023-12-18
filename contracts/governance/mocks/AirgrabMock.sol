@@ -6,6 +6,7 @@ import { PooCoinMock } from "./PooCoinMock.sol";
 
 contract AirgrabMock is Ownable {
   mapping(address account => bool canClaim) public canClaimAddresses;
+  mapping(address account => bool claimed) public hasClaimed;
   PooCoinMock public mentoToken;
 
   constructor() {
@@ -14,6 +15,10 @@ contract AirgrabMock is Ownable {
 
   function toggleClaim(address targetAddress) public {
     canClaimAddresses[targetAddress] = !canClaimAddresses[targetAddress];
+  }
+
+  function toggleClaimed(address targetAddress) public {
+    hasClaimed[targetAddress] = !hasClaimed[targetAddress];
   }
 
   function claim(
@@ -26,6 +31,18 @@ contract AirgrabMock is Ownable {
     string memory fractalId
   ) public {
     require(canClaimAddresses[msg.sender], "Address cannot claim");
+    require(!hasClaimed[msg.sender], "Address has already claimed");
+
+    hasClaimed[msg.sender] = true;
+
     mentoToken.mint(msg.sender, amount);
+  }
+
+  function checkHasClaimed(address account) public returns (bool) {
+    return hasClaimed[account];
+  }
+
+  function checkCanClaim(address account) public returns (bool) {
+    return canClaimAddresses[account];
   }
 }
